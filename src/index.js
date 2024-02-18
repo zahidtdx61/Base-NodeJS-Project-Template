@@ -1,6 +1,6 @@
 const express = require("express");
 
-const { ServerConfig, Logger } = require("./config");
+const { ServerConfig } = require("./config");
 const apiRoutes = require("./routes");
 
 const app = express();
@@ -11,5 +11,4 @@ app.listen(ServerConfig.PORT, () => {
     console.log(
         `Successfully running the server on port: ${ServerConfig.PORT}`
     );
-    Logger.info("Successfully started the server");
 });
